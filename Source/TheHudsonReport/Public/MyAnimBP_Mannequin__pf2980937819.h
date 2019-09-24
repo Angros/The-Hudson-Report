@@ -1,0 +1,582 @@
+#pragma once
+#include "Blueprint/BlueprintSupport.h"
+#include "Animation/AnimClassData.h"
+#include "Runtime/Engine/Classes/Engine/EngineTypes.h"
+#include "Runtime/Engine/Classes/Animation/AnimInstance.h"
+#include "Runtime/AnimGraphRuntime/Public/AnimNodes/AnimNode_BlendListByBool.h"
+#include "Runtime/AnimGraphRuntime/Public/AnimNodes/AnimNode_Slot.h"
+#include "Runtime/Engine/Classes/Animation/AnimNode_UseCachedPose.h"
+#include "Runtime/AnimGraphRuntime/Public/AnimNodes/AnimNode_LayeredBoneBlend.h"
+#include "Runtime/Engine/Classes/Animation/AnimNode_SaveCachedPose.h"
+#include "Runtime/AnimGraphRuntime/Public/AnimNodes/AnimNode_RotationOffsetBlendSpace.h"
+#include "Runtime/Engine/Classes/Animation/AnimNode_StateMachine.h"
+#include "Runtime/AnimGraphRuntime/Public/AnimNodes/AnimNode_Root.h"
+#include "Runtime/AnimGraphRuntime/Public/AnimNodes/AnimNode_BlendSpacePlayer.h"
+#include "Runtime/Engine/Classes/Animation/AnimNode_SequencePlayer.h"
+#include "Runtime/Engine/Classes/Animation/AnimNode_TransitionResult.h"
+#include "Runtime/CoreUObject/Public/UObject/NoExportTypes.h"
+class AMyChar_C__pf2980937819;
+class USoundBase;
+class AActor;
+class UPhysicalMaterial;
+class UPrimitiveComponent;
+#include "MyAnimBP_Mannequin__pf2980937819.generated.h"
+UCLASS(config=Engine, Blueprintable, BlueprintType, meta=(ReplaceConverted="/Game/Mannequin/AngrosEdit/MyAnimBP_Mannequin.MyAnimBP_Mannequin_C", OverrideNativeName="MyAnimBP_Mannequin_C"))
+class UMyAnimBP_Mannequin_C__pf2980937819 : public UAnimInstance
+{
+public:
+	GENERATED_BODY()
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_Root_7C3702D2409F925B55A820AA3C0C38C0"))
+	FAnimNode_Root bpv__AnimGraphNode_Root_7C3702D2409F925B55A820AA3C0C38C0__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_0FD3FBA14003DBA0180ABEA9725B3765"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_0FD3FBA14003DBA0180ABEA9725B3765__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_4F64279D46062EF9B7CF6193BC453E92"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_4F64279D46062EF9B7CF6193BC453E92__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_73D39B2F4792CEB3225C6FA9E8681F49"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_73D39B2F4792CEB3225C6FA9E8681F49__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_9151297B4C7C62EC73B8B39A62573AEC"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_9151297B4C7C62EC73B8B39A62573AEC__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_22030C3F4ED87A965B2D15BFF400D9C6"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_22030C3F4ED87A965B2D15BFF400D9C6__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_A8B9D8FC41C94781152744B97EBCA1E9"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_A8B9D8FC41C94781152744B97EBCA1E9__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_9B7A8A864F9C88552BD0078BB0DDAD92"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_9B7A8A864F9C88552BD0078BB0DDAD92__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_C0ABE6AF4014212EADB33AA12E45020F"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_C0ABE6AF4014212EADB33AA12E45020F__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_573282D44A09426CBF622995F0B295CB"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_573282D44A09426CBF622995F0B295CB__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_715F148B43E79664E6BDF0B7ABF76C5F"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_715F148B43E79664E6BDF0B7ABF76C5F__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_FFF022D6461C925CF15D698AE02BDCBF"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_FFF022D6461C925CF15D698AE02BDCBF__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_CF25E4A5461BD67D94F54EBF2EF70865"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_CF25E4A5461BD67D94F54EBF2EF70865__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_ADD12AAA4CA4D7BEEB74D1B5926E8929"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_ADD12AAA4CA4D7BEEB74D1B5926E8929__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_8B3C658E45EB197AE10FC4A800E1A6C6"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_8B3C658E45EB197AE10FC4A800E1A6C6__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_109DE5334665BB241501758A61E1EB92"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_109DE5334665BB241501758A61E1EB92__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_383B1D2C42A7821657AD00BD0BC916C4"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_383B1D2C42A7821657AD00BD0BC916C4__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_6AE1654D4E4311DC093F1AA942AA8139"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_6AE1654D4E4311DC093F1AA942AA8139__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_D92607A3416CD8B1A466C9BE25D2D90C"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_D92607A3416CD8B1A466C9BE25D2D90C__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_44BB57B24B6A10042A6561A52C90824B"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_44BB57B24B6A10042A6561A52C90824B__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_F154AFE44FB3D5E7372300B8B2B61400"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_F154AFE44FB3D5E7372300B8B2B61400__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_6E4E6E584D879006C8D684923D3ACB8E"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_6E4E6E584D879006C8D684923D3ACB8E__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_7635C58146417CAC541DADBD8E586CF7"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_7635C58146417CAC541DADBD8E586CF7__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_3E2FA962449AFBA8E195E5A7D9BF7105"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_3E2FA962449AFBA8E195E5A7D9BF7105__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_534EC2F2464CDFCDCF516B8C5DBAACC4"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_534EC2F2464CDFCDCF516B8C5DBAACC4__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_0BA5EB7542D89A5026301EB9DFE9B98F"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_0BA5EB7542D89A5026301EB9DFE9B98F__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_71750ECA4BFC231CAEEEE9A8BE87DCE3"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_71750ECA4BFC231CAEEEE9A8BE87DCE3__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_A182F3B84BBB4ABA051F99BFB9AAAB07"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_A182F3B84BBB4ABA051F99BFB9AAAB07__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_9F933FC74BB2C4482B440DBAC079AC1C"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_9F933FC74BB2C4482B440DBAC079AC1C__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_B26D2A3246A77C89752F02A65E2B9B49"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_B26D2A3246A77C89752F02A65E2B9B49__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_11A6AAD04D031EFE6A63EBAFD7A3A221"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_11A6AAD04D031EFE6A63EBAFD7A3A221__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_4355FD1E459E8D9D4F822CB7A9516D5A"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_4355FD1E459E8D9D4F822CB7A9516D5A__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_5821A86440622115833E14B4B9CF7779"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_5821A86440622115833E14B4B9CF7779__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_ED0CC38E4BCCEAB2F8423099BA852C1D"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_ED0CC38E4BCCEAB2F8423099BA852C1D__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_67E9587544A620987F03D3AA7E92AF8B"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_67E9587544A620987F03D3AA7E92AF8B__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_1CA6E21240EA51CCC3DB3B970B016FCE"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_1CA6E21240EA51CCC3DB3B970B016FCE__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_29799D5846B680C6C5038787D85A2F48"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_29799D5846B680C6C5038787D85A2F48__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_1B46A7F247E1AE873843409C1C410636"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_1B46A7F247E1AE873843409C1C410636__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_5C25FDFB46F185AED2903A9986BF5824"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_5C25FDFB46F185AED2903A9986BF5824__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_3C19255E4FC60B71EDF658B59DD8FF1F"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_3C19255E4FC60B71EDF658B59DD8FF1F__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_FE0F46CC410BB79D87ECF68F1E09139E"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_FE0F46CC410BB79D87ECF68F1E09139E__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_34AFFD5546FA571F04C54791760FB1A1"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_34AFFD5546FA571F04C54791760FB1A1__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_EE1F591146D6F67B9B2188B96E19C52A"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_EE1F591146D6F67B9B2188B96E19C52A__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_TransitionResult_CD1DDB14437AA60B81A9539ACCE80C6B"))
+	FAnimNode_TransitionResult bpv__AnimGraphNode_TransitionResult_CD1DDB14437AA60B81A9539ACCE80C6B__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_SequencePlayer_FA68C61B4F29037811A34DB0FFB385E8"))
+	FAnimNode_SequencePlayer bpv__AnimGraphNode_SequencePlayer_FA68C61B4F29037811A34DB0FFB385E8__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_StateResult_06B9A6C841E86825627A2E854313E928"))
+	FAnimNode_Root bpv__AnimGraphNode_StateResult_06B9A6C841E86825627A2E854313E928__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_SequencePlayer_928386C8477694F7ACAD639EA73FD60A"))
+	FAnimNode_SequencePlayer bpv__AnimGraphNode_SequencePlayer_928386C8477694F7ACAD639EA73FD60A__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_StateResult_E018DF624889C47354284B8088BBCA67"))
+	FAnimNode_Root bpv__AnimGraphNode_StateResult_E018DF624889C47354284B8088BBCA67__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_SequencePlayer_EB61F382486A1158B658798B49C0F3EB"))
+	FAnimNode_SequencePlayer bpv__AnimGraphNode_SequencePlayer_EB61F382486A1158B658798B49C0F3EB__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_StateResult_85288A104A58980020EAF29CD0727354"))
+	FAnimNode_Root bpv__AnimGraphNode_StateResult_85288A104A58980020EAF29CD0727354__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_SequencePlayer_5106B73E424863A400D7058D5E5A36362"))
+	FAnimNode_SequencePlayer bpv__AnimGraphNode_SequencePlayer_5106B73E424863A400D7058D5E5A36362__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_StateResult_88315C8D4E99B9732C17A8A4FE3F38B02"))
+	FAnimNode_Root bpv__AnimGraphNode_StateResult_88315C8D4E99B9732C17A8A4FE3F38B02__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_SequencePlayer_5106B73E424863A400D7058D5E5A3636"))
+	FAnimNode_SequencePlayer bpv__AnimGraphNode_SequencePlayer_5106B73E424863A400D7058D5E5A3636__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_StateResult_88315C8D4E99B9732C17A8A4FE3F38B0"))
+	FAnimNode_Root bpv__AnimGraphNode_StateResult_88315C8D4E99B9732C17A8A4FE3F38B0__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_SequencePlayer_892C48C043A9B7E15851F799D4471E8F"))
+	FAnimNode_SequencePlayer bpv__AnimGraphNode_SequencePlayer_892C48C043A9B7E15851F799D4471E8F__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_StateResult_6653121043D30FF1201D31BC09DBDF02"))
+	FAnimNode_Root bpv__AnimGraphNode_StateResult_6653121043D30FF1201D31BC09DBDF02__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_SequencePlayer_08E34BAE432DDF19D5BF46870968F6F9"))
+	FAnimNode_SequencePlayer bpv__AnimGraphNode_SequencePlayer_08E34BAE432DDF19D5BF46870968F6F9__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_StateResult_DBC8699644DE2163B77C80B2B26C1DC5"))
+	FAnimNode_Root bpv__AnimGraphNode_StateResult_DBC8699644DE2163B77C80B2B26C1DC5__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_SequencePlayer_5FACD5FB4EFBA3B980DBB1AA20079FC4"))
+	FAnimNode_SequencePlayer bpv__AnimGraphNode_SequencePlayer_5FACD5FB4EFBA3B980DBB1AA20079FC4__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_StateResult_909382A342606E4319EEEE8182C8BF65"))
+	FAnimNode_Root bpv__AnimGraphNode_StateResult_909382A342606E4319EEEE8182C8BF65__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_SequencePlayer_02F89AD44BB9F51B4AF822BAE31D8063"))
+	FAnimNode_SequencePlayer bpv__AnimGraphNode_SequencePlayer_02F89AD44BB9F51B4AF822BAE31D8063__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_StateResult_ECC1FF2847316744403D7EACCC20C1F5"))
+	FAnimNode_Root bpv__AnimGraphNode_StateResult_ECC1FF2847316744403D7EACCC20C1F5__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_SequencePlayer_CDA34E6E4A393177BA82B5854B419588"))
+	FAnimNode_SequencePlayer bpv__AnimGraphNode_SequencePlayer_CDA34E6E4A393177BA82B5854B419588__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_StateResult_4EF25ECA4A4810A3FBC926902BAF3632"))
+	FAnimNode_Root bpv__AnimGraphNode_StateResult_4EF25ECA4A4810A3FBC926902BAF3632__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_SequencePlayer_8299374A4B77BB2A617723B2148A5D61"))
+	FAnimNode_SequencePlayer bpv__AnimGraphNode_SequencePlayer_8299374A4B77BB2A617723B2148A5D61__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_StateResult_557091D14FEB161BBDAF8CA4AA817A83"))
+	FAnimNode_Root bpv__AnimGraphNode_StateResult_557091D14FEB161BBDAF8CA4AA817A83__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_SequencePlayer_1FA456594D9F02D2FE3C7EBFA510D345"))
+	FAnimNode_SequencePlayer bpv__AnimGraphNode_SequencePlayer_1FA456594D9F02D2FE3C7EBFA510D345__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_StateResult_E38605204A540FA5CB3C68A243B6903C"))
+	FAnimNode_Root bpv__AnimGraphNode_StateResult_E38605204A540FA5CB3C68A243B6903C__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_SequencePlayer_FC6929B74CF41EEBA86278A7A8C88D82"))
+	FAnimNode_SequencePlayer bpv__AnimGraphNode_SequencePlayer_FC6929B74CF41EEBA86278A7A8C88D82__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_StateResult_352234C84DDAFE6B1069C380833D90F2"))
+	FAnimNode_Root bpv__AnimGraphNode_StateResult_352234C84DDAFE6B1069C380833D90F2__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_SequencePlayer_B3E5D44747429DD651D1F68B6485216E"))
+	FAnimNode_SequencePlayer bpv__AnimGraphNode_SequencePlayer_B3E5D44747429DD651D1F68B6485216E__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_StateResult_79901CA3419D5E81E7FD4E92B57D765C"))
+	FAnimNode_Root bpv__AnimGraphNode_StateResult_79901CA3419D5E81E7FD4E92B57D765C__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_SequencePlayer_C84C773B4276E62765F25BBA8D867469"))
+	FAnimNode_SequencePlayer bpv__AnimGraphNode_SequencePlayer_C84C773B4276E62765F25BBA8D867469__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_StateResult_B921BEAF4C456CDF5B8B37A9B8F7CA08"))
+	FAnimNode_Root bpv__AnimGraphNode_StateResult_B921BEAF4C456CDF5B8B37A9B8F7CA08__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_BlendSpacePlayer_B94CD6FE45A89F97D5252A88E6D5C0F7"))
+	FAnimNode_BlendSpacePlayer bpv__AnimGraphNode_BlendSpacePlayer_B94CD6FE45A89F97D5252A88E6D5C0F7__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_StateResult_7EF487614383EF11760902A25E99D16A"))
+	FAnimNode_Root bpv__AnimGraphNode_StateResult_7EF487614383EF11760902A25E99D16A__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_BlendSpacePlayer_E57C56644EA81E474C57FA931247D0FF"))
+	FAnimNode_BlendSpacePlayer bpv__AnimGraphNode_BlendSpacePlayer_E57C56644EA81E474C57FA931247D0FF__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_StateResult_2530309C42B9C3D4B6A896AC328360B0"))
+	FAnimNode_Root bpv__AnimGraphNode_StateResult_2530309C42B9C3D4B6A896AC328360B0__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_SequencePlayer_98D1F382443A1A2EA14590ACC97B5418"))
+	FAnimNode_SequencePlayer bpv__AnimGraphNode_SequencePlayer_98D1F382443A1A2EA14590ACC97B5418__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_StateResult_8CB0C92745D7F95435048C9E598E9E74"))
+	FAnimNode_Root bpv__AnimGraphNode_StateResult_8CB0C92745D7F95435048C9E598E9E74__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_SequencePlayer_EAEA5D0841525AE795113F8C644906F6"))
+	FAnimNode_SequencePlayer bpv__AnimGraphNode_SequencePlayer_EAEA5D0841525AE795113F8C644906F6__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_StateResult_C20EDA6A48FA13D7DDDBB39E6729CBB3"))
+	FAnimNode_Root bpv__AnimGraphNode_StateResult_C20EDA6A48FA13D7DDDBB39E6729CBB3__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_BlendSpacePlayer_D46ABAE548237FBEC37A89B8A78D7F4E"))
+	FAnimNode_BlendSpacePlayer bpv__AnimGraphNode_BlendSpacePlayer_D46ABAE548237FBEC37A89B8A78D7F4E__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_StateResult_DF31109E4AFC8ADE77B5E1BDDC468FC8"))
+	FAnimNode_Root bpv__AnimGraphNode_StateResult_DF31109E4AFC8ADE77B5E1BDDC468FC8__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_StateMachine_5ACE148740E6B8C12A9481825B97C8EA"))
+	FAnimNode_StateMachine bpv__AnimGraphNode_StateMachine_5ACE148740E6B8C12A9481825B97C8EA__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_Slot_318CDBAD41604B011CB5478E5147C927"))
+	FAnimNode_Slot bpv__AnimGraphNode_Slot_318CDBAD41604B011CB5478E5147C927__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_LayeredBoneBlend_1668C8704F05812EFD8CB085CF538AF3"))
+	FAnimNode_LayeredBoneBlend bpv__AnimGraphNode_LayeredBoneBlend_1668C8704F05812EFD8CB085CF538AF3__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_BlendListByBool_B1B39077439A617E3F3B218E2EAF4EA7"))
+	FAnimNode_BlendListByBool bpv__AnimGraphNode_BlendListByBool_B1B39077439A617E3F3B218E2EAF4EA7__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_SaveCachedPose_5B566E274D18743A04501C894703D3D4"))
+	FAnimNode_SaveCachedPose bpv__AnimGraphNode_SaveCachedPose_5B566E274D18743A04501C894703D3D4__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_UseCachedPose_164454744C1DB86A4510DE8E0F82600F"))
+	FAnimNode_UseCachedPose bpv__AnimGraphNode_UseCachedPose_164454744C1DB86A4510DE8E0F82600F__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_RotationOffsetBlendSpace_003C97EC462007A97705B5B638A65D04"))
+	FAnimNode_RotationOffsetBlendSpace bpv__AnimGraphNode_RotationOffsetBlendSpace_003C97EC462007A97705B5B638A65D04__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_RotationOffsetBlendSpace_4F0385894D98B059CB731A83D4513C93"))
+	FAnimNode_RotationOffsetBlendSpace bpv__AnimGraphNode_RotationOffsetBlendSpace_4F0385894D98B059CB731A83D4513C93__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_LayeredBoneBlend_7AE064AC4E904B82743A778958374B89"))
+	FAnimNode_LayeredBoneBlend bpv__AnimGraphNode_LayeredBoneBlend_7AE064AC4E904B82743A778958374B89__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_Slot_13B25521440C69CDF604DDA8217A8815"))
+	FAnimNode_Slot bpv__AnimGraphNode_Slot_13B25521440C69CDF604DDA8217A8815__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_Slot_9347B0CE46689D1452E25D873D4F534C"))
+	FAnimNode_Slot bpv__AnimGraphNode_Slot_9347B0CE46689D1452E25D873D4F534C__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_UseCachedPose_EA1C1230461418AEFAEE398EEDFB5127"))
+	FAnimNode_UseCachedPose bpv__AnimGraphNode_UseCachedPose_EA1C1230461418AEFAEE398EEDFB5127__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_UseCachedPose_2F52028E420E50F1B4B1AF85F5F25887"))
+	FAnimNode_UseCachedPose bpv__AnimGraphNode_UseCachedPose_2F52028E420E50F1B4B1AF85F5F25887__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_SaveCachedPose_983B5D0B43D1C1EAB8D733AEFE46E4B8"))
+	FAnimNode_SaveCachedPose bpv__AnimGraphNode_SaveCachedPose_983B5D0B43D1C1EAB8D733AEFE46E4B8__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_UseCachedPose_9C87E6D740817325816CFF98CE2297F5"))
+	FAnimNode_UseCachedPose bpv__AnimGraphNode_UseCachedPose_9C87E6D740817325816CFF98CE2297F5__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_BlendListByBool_70D55BFE4F780171EC2D6DBE207BA941"))
+	FAnimNode_BlendListByBool bpv__AnimGraphNode_BlendListByBool_70D55BFE4F780171EC2D6DBE207BA941__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_UseCachedPose_0E3AB960458F5617132FE7AB5F74EED6"))
+	FAnimNode_UseCachedPose bpv__AnimGraphNode_UseCachedPose_0E3AB960458F5617132FE7AB5F74EED6__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_LayeredBoneBlend_5703EE5F4B152C13AB94F6AFEB6E15B3"))
+	FAnimNode_LayeredBoneBlend bpv__AnimGraphNode_LayeredBoneBlend_5703EE5F4B152C13AB94F6AFEB6E15B3__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_UseCachedPose_56A6909542A844C52D774389BC40486D"))
+	FAnimNode_UseCachedPose bpv__AnimGraphNode_UseCachedPose_56A6909542A844C52D774389BC40486D__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_SaveCachedPose_15CAF85746836C278B6DA286ACC4FE8A"))
+	FAnimNode_SaveCachedPose bpv__AnimGraphNode_SaveCachedPose_15CAF85746836C278B6DA286ACC4FE8A__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_SaveCachedPose_99107FCB4EEEE8B2F6FD83A962130EAE"))
+	FAnimNode_SaveCachedPose bpv__AnimGraphNode_SaveCachedPose_99107FCB4EEEE8B2F6FD83A962130EAE__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_UseCachedPose_D5364D9B44352326C518BF849B869787"))
+	FAnimNode_UseCachedPose bpv__AnimGraphNode_UseCachedPose_D5364D9B44352326C518BF849B869787__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_UseCachedPose_FB01C9A34C282182402BA3B8B2DCA02B"))
+	FAnimNode_UseCachedPose bpv__AnimGraphNode_UseCachedPose_FB01C9A34C282182402BA3B8B2DCA02B__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_UseCachedPose_5A2C1EE44067CF86B7A5F5A14A48F3A1"))
+	FAnimNode_UseCachedPose bpv__AnimGraphNode_UseCachedPose_5A2C1EE44067CF86B7A5F5A14A48F3A1__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_Slot_057373E84A683CE43B4F46B39CBDCA8D"))
+	FAnimNode_Slot bpv__AnimGraphNode_Slot_057373E84A683CE43B4F46B39CBDCA8D__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_LayeredBoneBlend_9A6D5F2A4F4565A3C425ECB3733EB0AF"))
+	FAnimNode_LayeredBoneBlend bpv__AnimGraphNode_LayeredBoneBlend_9A6D5F2A4F4565A3C425ECB3733EB0AF__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_UseCachedPose_5926A23546F8D98F70496DBF429D49FE"))
+	FAnimNode_UseCachedPose bpv__AnimGraphNode_UseCachedPose_5926A23546F8D98F70496DBF429D49FE__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_UseCachedPose_BD375E0A41361B8CAC2682A89BBF32D7"))
+	FAnimNode_UseCachedPose bpv__AnimGraphNode_UseCachedPose_BD375E0A41361B8CAC2682A89BBF32D7__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_BlendListByBool_08E66BDD4C076E7D835C6CB969925102"))
+	FAnimNode_BlendListByBool bpv__AnimGraphNode_BlendListByBool_08E66BDD4C076E7D835C6CB969925102__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_Slot_F7ECD00549259B9ED042728EE94FCB63"))
+	FAnimNode_Slot bpv__AnimGraphNode_Slot_F7ECD00549259B9ED042728EE94FCB63__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_LayeredBoneBlend_1244CA784538BB521AD35486C48FFCA5"))
+	FAnimNode_LayeredBoneBlend bpv__AnimGraphNode_LayeredBoneBlend_1244CA784538BB521AD35486C48FFCA5__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_UseCachedPose_193D0268480C633C6A9B0D88EDF761C4"))
+	FAnimNode_UseCachedPose bpv__AnimGraphNode_UseCachedPose_193D0268480C633C6A9B0D88EDF761C4__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_UseCachedPose_66E00CAA47195A4AA524E29329083C9C"))
+	FAnimNode_UseCachedPose bpv__AnimGraphNode_UseCachedPose_66E00CAA47195A4AA524E29329083C9C__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_LayeredBoneBlend_07D3F9E847A291E8DB58DEA9E546AA33"))
+	FAnimNode_LayeredBoneBlend bpv__AnimGraphNode_LayeredBoneBlend_07D3F9E847A291E8DB58DEA9E546AA33__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_LayeredBoneBlend_ED2AD28D4993F8D2E8B3A8BD6D8BAA4A"))
+	FAnimNode_LayeredBoneBlend bpv__AnimGraphNode_LayeredBoneBlend_ED2AD28D4993F8D2E8B3A8BD6D8BAA4A__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_UseCachedPose_9E9BB7ED42B029AD4F519EBCDB152DCC"))
+	FAnimNode_UseCachedPose bpv__AnimGraphNode_UseCachedPose_9E9BB7ED42B029AD4F519EBCDB152DCC__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_UseCachedPose_8F58AF8D48D4004C28719D830A2D8B3A"))
+	FAnimNode_UseCachedPose bpv__AnimGraphNode_UseCachedPose_8F58AF8D48D4004C28719D830A2D8B3A__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_Slot_AA7690BA45DF40EF30D0FC89BDC44844"))
+	FAnimNode_Slot bpv__AnimGraphNode_Slot_AA7690BA45DF40EF30D0FC89BDC44844__pf;
+	UPROPERTY(meta=(OverrideNativeName="AnimGraphNode_BlendListByBool_3F79F1DE4BAB560312566C96B77FB07D"))
+	FAnimNode_BlendListByBool bpv__AnimGraphNode_BlendListByBool_3F79F1DE4BAB560312566C96B77FB07D__pf;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta=(DisplayName="My Char", Category="Default", OverrideNativeName="MyChar"))
+	AMyChar_C__pf2980937819* bpv__MyChar__pf;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta=(DisplayName="Speed", Category="Default", OverrideNativeName="Speed"))
+	float bpv__Speed__pf;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta=(DisplayName="Direction", Category="Default", OverrideNativeName="Direction"))
+	float bpv__Direction__pf;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta=(DisplayName="Turn Right", Category="Default", OverrideNativeName="TurnRight"))
+	bool bpv__TurnRight__pf;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta=(DisplayName="Is Moving?", Category="Default", OverrideNativeName="IsMoving?"))
+	bool bpv__IsMovingx__pfzy;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta=(DisplayName="Turn Left", Category="Default", OverrideNativeName="TurnLeft"))
+	bool bpv__TurnLeft__pf;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta=(DisplayName="Pitch", Category="Default", OverrideNativeName="Pitch"))
+	float bpv__Pitch__pf;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta=(DisplayName="Has Weapon Attached?", Category="Default", OverrideNativeName="HasWeaponAttached?"))
+	bool bpv__HasWeaponAttachedx__pfzy;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta=(DisplayName="Has AWeapon?", Category="Default", OverrideNativeName="HasAWeapon?"))
+	bool bpv__HasAWeaponx__pfzy;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta=(DisplayName="Is Shooting", Category="Default", OverrideNativeName="IsShooting"))
+	bool bpv__IsShooting__pf;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta=(DisplayName="Is in Air?", Category="Default", OverrideNativeName="IsInAir?"))
+	bool bpv__IsInAirx__pfzy;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta=(DisplayName="Is Running", Category="Default", OverrideNativeName="IsRunning"))
+	bool bpv__IsRunning__pf;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta=(DisplayName="Start Run", Category="Default", OverrideNativeName="StartRun"))
+	bool bpv__StartRun__pf;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta=(DisplayName="Is Reloading", Category="Default", OverrideNativeName="isReloading"))
+	bool bpv__isReloading__pf;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta=(DisplayName="Char Health", Category="Default", OverrideNativeName="CharHealth"))
+	float bpv__CharHealth__pf;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta=(DisplayName="Taking Damage", Category="Default", OverrideNativeName="TakingDamage"))
+	bool bpv__TakingDamage__pf;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta=(DisplayName="Interact?", Category="Default", OverrideNativeName="Interact?"))
+	bool bpv__Interactx__pfzy;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta=(DisplayName="Can Pick Up?", Category="Default", OverrideNativeName="CanPickUp?"))
+	bool bpv__CanPickUpx__pfzy;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta=(DisplayName="Begin First Level Anim", Category="Default", OverrideNativeName="BeginFirstLevelAnim"))
+	bool bpv__BeginFirstLevelAnim__pf;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta=(DisplayName="Open Gate?", Category="Default", OverrideNativeName="OpenGate?"))
+	bool bpv__OpenGatex__pfzy;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="Temp_object_Variable"))
+	USoundBase* b0l__Temp_object_Variable__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="Temp_bool_Has_Been_Initd_Variable"))
+	bool b0l__Temp_bool_Has_Been_Initd_Variable__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="Temp_object_Variable2"))
+	USoundBase* b0l__Temp_object_Variable2__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="Temp_bool_IsClosed_Variable"))
+	bool b0l__Temp_bool_IsClosed_Variable__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="Temp_object_Variable3"))
+	USoundBase* b0l__Temp_object_Variable3__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="Temp_object_Variable4"))
+	USoundBase* b0l__Temp_object_Variable4__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="Temp_bool_Has_Been_Initd_Variable2"))
+	bool b0l__Temp_bool_Has_Been_Initd_Variable2__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="Temp_bool_IsClosed_Variable2"))
+	bool b0l__Temp_bool_IsClosed_Variable2__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="Temp_object_Variable5"))
+	USoundBase* b0l__Temp_object_Variable5__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="Temp_byte_Variable"))
+	TEnumAsByte<EPhysicalSurface> b0l__Temp_byte_Variable__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="Temp_bool_Has_Been_Initd_Variable3"))
+	bool b0l__Temp_bool_Has_Been_Initd_Variable3__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="Temp_bool_IsClosed_Variable3"))
+	bool b0l__Temp_bool_IsClosed_Variable3__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_Event_DeltaTimeX"))
+	float b0l__K2Node_Event_DeltaTimeX__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsMy_Char"))
+	AMyChar_C__pf2980937819* b0l__K2Node_DynamicCast_AsMy_Char__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_bSuccess"))
+	bool b0l__K2Node_DynamicCast_bSuccess__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsMy_Char2"))
+	AMyChar_C__pf2980937819* b0l__K2Node_DynamicCast_AsMy_Char2__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_bSuccess2"))
+	bool b0l__K2Node_DynamicCast_bSuccess2__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsMy_Char3"))
+	AMyChar_C__pf2980937819* b0l__K2Node_DynamicCast_AsMy_Char3__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_bSuccess3"))
+	bool b0l__K2Node_DynamicCast_bSuccess3__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsMy_Char4"))
+	AMyChar_C__pf2980937819* b0l__K2Node_DynamicCast_AsMy_Char4__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_bSuccess4"))
+	bool b0l__K2Node_DynamicCast_bSuccess4__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_AsMy_Char5"))
+	AMyChar_C__pf2980937819* b0l__K2Node_DynamicCast_AsMy_Char5__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_DynamicCast_bSuccess5"))
+	bool b0l__K2Node_DynamicCast_bSuccess5__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_MakeArray_Array"))
+	TArray<AActor*> b0l__K2Node_MakeArray_Array__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="CallFunc_LineTraceSingle_NEW_OutHit"))
+	FHitResult b0l__CallFunc_LineTraceSingle_NEW_OutHit__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="K2Node_Select_Default"))
+	USoundBase* b0l__K2Node_Select_Default__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="CallFunc_BreakHitResult_bBlockingHit"))
+	bool b0l__CallFunc_BreakHitResult_bBlockingHit__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="CallFunc_BreakHitResult_bInitialOverlap"))
+	bool b0l__CallFunc_BreakHitResult_bInitialOverlap__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="CallFunc_BreakHitResult_Time"))
+	float b0l__CallFunc_BreakHitResult_Time__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="CallFunc_BreakHitResult_Location"))
+	FVector b0l__CallFunc_BreakHitResult_Location__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="CallFunc_BreakHitResult_ImpactPoint"))
+	FVector b0l__CallFunc_BreakHitResult_ImpactPoint__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="CallFunc_BreakHitResult_Normal"))
+	FVector b0l__CallFunc_BreakHitResult_Normal__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="CallFunc_BreakHitResult_ImpactNormal"))
+	FVector b0l__CallFunc_BreakHitResult_ImpactNormal__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="CallFunc_BreakHitResult_PhysMat"))
+	UPhysicalMaterial* b0l__CallFunc_BreakHitResult_PhysMat__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="CallFunc_BreakHitResult_HitActor"))
+	AActor* b0l__CallFunc_BreakHitResult_HitActor__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="CallFunc_BreakHitResult_HitComponent"))
+	UPrimitiveComponent* b0l__CallFunc_BreakHitResult_HitComponent__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="CallFunc_BreakHitResult_HitBoneName"))
+	FName b0l__CallFunc_BreakHitResult_HitBoneName__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="CallFunc_BreakHitResult_HitItem"))
+	int32 b0l__CallFunc_BreakHitResult_HitItem__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="CallFunc_BreakHitResult_FaceIndex"))
+	int32 b0l__CallFunc_BreakHitResult_FaceIndex__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="CallFunc_BreakHitResult_TraceStart"))
+	FVector b0l__CallFunc_BreakHitResult_TraceStart__pf;
+	UPROPERTY(Transient, DuplicateTransient, meta=(OverrideNativeName="CallFunc_BreakHitResult_TraceEnd"))
+	FVector b0l__CallFunc_BreakHitResult_TraceEnd__pf;
+	UMyAnimBP_Mannequin_C__pf2980937819(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
+	virtual void PostLoadSubobjects(FObjectInstancingGraph* OuterInstanceGraph) override;
+	static void __CustomDynamicClassInitialization(UDynamicClass* InDynamicClass);
+	static void __StaticDependenciesAssets(TArray<FBlueprintDependencyData>& AssetsToLoad);
+	static void __StaticDependencies_CommonAssets(TArray<FBlueprintDependencyData>& AssetsToLoad);
+	static void __StaticDependencies_DirectlyUsedAssets(TArray<FBlueprintDependencyData>& AssetsToLoad);
+	UFUNCTION(meta=(OverrideNativeName="ExecuteUbergraph_MyAnimBP_Mannequin_0"))
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_0(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_1(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_2(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_3(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_4(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_5(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_6(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_7(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_8(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_9(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_10(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_11(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_12(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_13(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_14(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_15(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_16(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_17(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_18(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_19(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_20(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_21(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_22(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_23(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_24(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_25(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_26(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_27(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_28(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_29(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_30(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_31(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_32(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_33(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_34(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_35(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_36(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_37(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_38(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_39(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_40(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_41(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_42(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_43(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_44(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_45(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_46(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_47(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_48(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_49(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_50(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_51(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_52(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_53(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_54(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_55(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_56(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_57(int32 bpp__EntryPoint__pf);
+	void bpf__ExecuteUbergraph_MyAnimBP_Mannequin__pf_58(int32 bpp__EntryPoint__pf);
+	UFUNCTION(BlueprintCallable, meta=(Category, OverrideNativeName="AnimNotify_Footstep_sound"))
+	virtual void bpf__AnimNotify_Footstep_sound__pf();
+	UFUNCTION(BlueprintCallable, meta=(Category, OverrideNativeName="Reload"))
+	virtual void bpf__Reload__pf();
+	UFUNCTION(BlueprintCallable, meta=(Category, OverrideNativeName="AnimNotify_StopRunning"))
+	virtual void bpf__AnimNotify_StopRunning__pf();
+	UFUNCTION(BlueprintCallable, meta=(Category, OverrideNativeName="Shoot"))
+	virtual void bpf__Shoot__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_9B7A8A864F9C88552BD0078BB0DDAD92"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_9B7A8A864F9C88552BD0078BB0DDAD92__pf();
+	UFUNCTION(BlueprintCallable, meta=(Category, OverrideNativeName="AnimNotify_UnholsterWeapon"))
+	virtual void bpf__AnimNotify_UnholsterWeapon__pf();
+	UFUNCTION(BlueprintCallable, meta=(Category, OverrideNativeName="AnimNotify_HolsterWeapon"))
+	virtual void bpf__AnimNotify_HolsterWeapon__pf();
+	UFUNCTION(meta=(ToolTip="Executed when the Animation is updated", CppFromBpEvent, OverrideNativeName="BlueprintUpdateAnimation"))
+	void bpf__BlueprintUpdateAnimation__pf(float bpp__DeltaTimeX__pf);
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_A8B9D8FC41C94781152744B97EBCA1E9"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_A8B9D8FC41C94781152744B97EBCA1E9__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_C0ABE6AF4014212EADB33AA12E45020F"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_C0ABE6AF4014212EADB33AA12E45020F__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_573282D44A09426CBF622995F0B295CB"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_573282D44A09426CBF622995F0B295CB__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_BlendListByBool_3F79F1DE4BAB560312566C96B77FB07D"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_BlendListByBool_3F79F1DE4BAB560312566C96B77FB07D__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_BlendListByBool_08E66BDD4C076E7D835C6CB969925102"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_BlendListByBool_08E66BDD4C076E7D835C6CB969925102__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_BlendListByBool_70D55BFE4F780171EC2D6DBE207BA941"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_BlendListByBool_70D55BFE4F780171EC2D6DBE207BA941__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_RotationOffsetBlendSpace_4F0385894D98B059CB731A83D4513C93"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_RotationOffsetBlendSpace_4F0385894D98B059CB731A83D4513C93__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_RotationOffsetBlendSpace_003C97EC462007A97705B5B638A65D04"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_RotationOffsetBlendSpace_003C97EC462007A97705B5B638A65D04__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_BlendListByBool_B1B39077439A617E3F3B218E2EAF4EA7"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_BlendListByBool_B1B39077439A617E3F3B218E2EAF4EA7__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_BlendSpacePlayer_D46ABAE548237FBEC37A89B8A78D7F4E"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_BlendSpacePlayer_D46ABAE548237FBEC37A89B8A78D7F4E__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_715F148B43E79664E6BDF0B7ABF76C5F"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_715F148B43E79664E6BDF0B7ABF76C5F__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_BlendSpacePlayer_E57C56644EA81E474C57FA931247D0FF"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_BlendSpacePlayer_E57C56644EA81E474C57FA931247D0FF__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_BlendSpacePlayer_B94CD6FE45A89F97D5252A88E6D5C0F7"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_BlendSpacePlayer_B94CD6FE45A89F97D5252A88E6D5C0F7__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_FFF022D6461C925CF15D698AE02BDCBF"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_FFF022D6461C925CF15D698AE02BDCBF__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_22030C3F4ED87A965B2D15BFF400D9C6"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_22030C3F4ED87A965B2D15BFF400D9C6__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_CF25E4A5461BD67D94F54EBF2EF70865"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_CF25E4A5461BD67D94F54EBF2EF70865__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_CD1DDB14437AA60B81A9539ACCE80C6B"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_CD1DDB14437AA60B81A9539ACCE80C6B__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_EE1F591146D6F67B9B2188B96E19C52A"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_EE1F591146D6F67B9B2188B96E19C52A__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_34AFFD5546FA571F04C54791760FB1A1"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_34AFFD5546FA571F04C54791760FB1A1__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_ADD12AAA4CA4D7BEEB74D1B5926E8929"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_ADD12AAA4CA4D7BEEB74D1B5926E8929__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_FE0F46CC410BB79D87ECF68F1E09139E"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_FE0F46CC410BB79D87ECF68F1E09139E__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_3C19255E4FC60B71EDF658B59DD8FF1F"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_3C19255E4FC60B71EDF658B59DD8FF1F__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_5C25FDFB46F185AED2903A9986BF5824"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_5C25FDFB46F185AED2903A9986BF5824__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_8B3C658E45EB197AE10FC4A800E1A6C6"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_8B3C658E45EB197AE10FC4A800E1A6C6__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_1B46A7F247E1AE873843409C1C410636"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_1B46A7F247E1AE873843409C1C410636__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_29799D5846B680C6C5038787D85A2F48"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_29799D5846B680C6C5038787D85A2F48__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_1CA6E21240EA51CCC3DB3B970B016FCE"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_1CA6E21240EA51CCC3DB3B970B016FCE__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_67E9587544A620987F03D3AA7E92AF8B"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_67E9587544A620987F03D3AA7E92AF8B__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_109DE5334665BB241501758A61E1EB92"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_109DE5334665BB241501758A61E1EB92__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_ED0CC38E4BCCEAB2F8423099BA852C1D"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_ED0CC38E4BCCEAB2F8423099BA852C1D__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_9151297B4C7C62EC73B8B39A62573AEC"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_9151297B4C7C62EC73B8B39A62573AEC__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_5821A86440622115833E14B4B9CF7779"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_5821A86440622115833E14B4B9CF7779__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_4355FD1E459E8D9D4F822CB7A9516D5A"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_4355FD1E459E8D9D4F822CB7A9516D5A__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_11A6AAD04D031EFE6A63EBAFD7A3A221"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_11A6AAD04D031EFE6A63EBAFD7A3A221__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_0FD3FBA14003DBA0180ABEA9725B3765"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_0FD3FBA14003DBA0180ABEA9725B3765__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_B26D2A3246A77C89752F02A65E2B9B49"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_B26D2A3246A77C89752F02A65E2B9B49__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_9F933FC74BB2C4482B440DBAC079AC1C"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_9F933FC74BB2C4482B440DBAC079AC1C__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_A182F3B84BBB4ABA051F99BFB9AAAB07"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_A182F3B84BBB4ABA051F99BFB9AAAB07__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_71750ECA4BFC231CAEEEE9A8BE87DCE3"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_71750ECA4BFC231CAEEEE9A8BE87DCE3__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_4F64279D46062EF9B7CF6193BC453E92"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_4F64279D46062EF9B7CF6193BC453E92__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_0BA5EB7542D89A5026301EB9DFE9B98F"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_0BA5EB7542D89A5026301EB9DFE9B98F__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_534EC2F2464CDFCDCF516B8C5DBAACC4"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_534EC2F2464CDFCDCF516B8C5DBAACC4__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_383B1D2C42A7821657AD00BD0BC916C4"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_383B1D2C42A7821657AD00BD0BC916C4__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_3E2FA962449AFBA8E195E5A7D9BF7105"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_3E2FA962449AFBA8E195E5A7D9BF7105__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_7635C58146417CAC541DADBD8E586CF7"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_7635C58146417CAC541DADBD8E586CF7__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_6E4E6E584D879006C8D684923D3ACB8E"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_6E4E6E584D879006C8D684923D3ACB8E__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_F154AFE44FB3D5E7372300B8B2B61400"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_F154AFE44FB3D5E7372300B8B2B61400__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_73D39B2F4792CEB3225C6FA9E8681F49"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_73D39B2F4792CEB3225C6FA9E8681F49__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_44BB57B24B6A10042A6561A52C90824B"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_44BB57B24B6A10042A6561A52C90824B__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_D92607A3416CD8B1A466C9BE25D2D90C"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_D92607A3416CD8B1A466C9BE25D2D90C__pf();
+	UFUNCTION(meta=(OverrideNativeName="EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_6AE1654D4E4311DC093F1AA942AA8139"))
+	virtual void bpf__EvaluateGraphExposedInputs_ExecuteUbergraph_MyAnimBP_Mannequin_AnimGraphNode_TransitionResult_6AE1654D4E4311DC093F1AA942AA8139__pf();
+public:
+};
